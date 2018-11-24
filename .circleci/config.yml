@@ -29,3 +29,9 @@ jobs:
               docker tag $TAG eu.gcr.io/zdev-com/zdev-website:latest
               docker push eu.gcr.io/zdev-com/zdev-website:latest
             fi
+
+            if [ "$CIRCLE_BRANCH" == "staging" ]; then
+              echo $GCR_CREDENTIALS | docker login -u _json_key --password-stdin https://eu.gcr.io
+              docker tag $TAG eu.gcr.io/zdev-com/zdev-website:staging
+              docker push eu.gcr.io/zdev-com/zdev-website:staging
+            fi
