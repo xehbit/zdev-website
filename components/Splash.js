@@ -1,7 +1,14 @@
+import Header from './Header';
+
 export default () => <section className="hero is-fullheight is-dark splash">
+  <div className="hero-head">
+    <Header />
+  </div>
+
   <div className="hero-body">
-    <div className="container">
-      <img src="/static/logo.png" />
+    <div className="container has-text-centered">
+      <h1 className="title">Maatwerksoftware</h1>
+      {/* <img src="/static/logo.png" /> */}
     </div>
   </div>
 
